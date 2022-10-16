@@ -1,5 +1,5 @@
 var score = document.getElementById('score');
-var queues = 1;
+var queues = 0;
 var perfectSquare = '#' + queues;
 
 function randomNum() {
@@ -26,7 +26,7 @@ function submitBut () {
         score.innerHTML = parseInt(score.innerHTML) + 1;
         perfectSquare = Math.floor(Math.random() * 30);
         document.getElementById("number").innerHTML = perfectSquare + '²';
-        queues + 1;
+        queues += 1;
     } else if (answer == '') {
         return;
     } else {
@@ -34,7 +34,7 @@ function submitBut () {
         console.log('INCORRECT');
         perfectSquare = Math.floor(Math.random() * 30);
         document.getElementById("number").innerHTML = perfectSquare + '²';
-        queues + 1;
+        queues += 1;
     }
 }
 
@@ -56,7 +56,7 @@ function subAnw() {
                 queues += 1;
             } else if (answer == '') {
                 return;
-            } else {
+            } else if (answer != '') {
                 console.log(perfectSquare * perfectSquare);
                 console.log('INCORRECT');
                 perfectSquare = Math.floor(Math.random() * 30);
