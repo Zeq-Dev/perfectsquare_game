@@ -6,6 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Perfect Square 1-30</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: cadetblue;
+
+        }
+
+
+        .btn{
+            text-decoration: none;
+            padding: 15px 40px;
+            background-color: rgba(57, 120, 214);
+            color: #fff;
+            border-radius:  40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            box-shadow: 0 10px 40px rgba(255, 122, 0, 0.4);
+            
+        }
+
+
+    </style>
+
+
+
 </head>
 <body>
     <div class="main">
@@ -20,9 +55,16 @@
             <button id="start-button" onclick="randomNum()">START</button>
             <input type="number" id="answer" onclick="subAnw()" placeholder="your answer here" disabled="true">
             <button id="submit-button" onclick="submitBut()">Submit</button>
+
+
+    
+            <div class="video-container">
+                <span class="close">&#10006;</span>
+                <video src="1.mp4" controls></video>
+            </div>
         </div>
     </div>
-
+    
 
     <script src="main.js"></script>
 </body>
