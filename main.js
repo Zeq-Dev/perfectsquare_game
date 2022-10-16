@@ -1,5 +1,5 @@
 var score = document.getElementById('score');
-var queues = 0;
+var queues = 1;
 var perfectSquare = '#' + queues;
 
 function randomNum() {
@@ -17,7 +17,7 @@ function submitBut () {
     var answer = document.getElementById('answer').value;
     document.getElementById('answer').value = '';
     console.log('#'+queues)
-    if (queues == 9) {
+    if (queues == 10) {
         document.getElementById("number").innerHTML = "Press Start!";
         document.getElementById("start-button").style.display = "block";
         document.getElementById("submit-button").style.display = "none";
@@ -26,7 +26,7 @@ function submitBut () {
         score.innerHTML = parseInt(score.innerHTML) + 1;
         perfectSquare = Math.floor(Math.random() * 30);
         document.getElementById("number").innerHTML = perfectSquare + '²';
-        queues += 1;
+        queues + 1;
     } else if (answer == '') {
         return;
     } else {
@@ -34,7 +34,7 @@ function submitBut () {
         console.log('INCORRECT');
         perfectSquare = Math.floor(Math.random() * 30);
         document.getElementById("number").innerHTML = perfectSquare + '²';
-        queues += 1;
+        queues + 1;
     }
 }
 
@@ -44,7 +44,7 @@ function subAnw() {
             var answer = document.getElementById('answer').value;
             document.getElementById('answer').value = '';
             console.log('#'+queues)
-            if (queues == 9) {
+            if (queues == 10) {
                 document.getElementById("number").innerHTML = "Press Start!";
                 document.getElementById("start-button").style.display = "block";
                 document.getElementById("submit-button").style.display = "none";
