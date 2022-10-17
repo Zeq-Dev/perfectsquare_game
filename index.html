@@ -10,16 +10,18 @@
 <body>
     <div class="main">
         <div class="heading">
-            <h1>Perfect Square</h1>
+            <h1>Perfect Square 1-30</h1>
         </div>
         <div class="game">
             <div class="board">
                 <div id="number">Press Start!</div>
                 <div class="score"><span id="score">0</span>/10</div>
             </div>
-            <button id="start-button" onclick="randomNum()">START</button>
-            <input type="number" id="answer" onclick="subAnw()" placeholder="your answer here" disabled="true">
-            <button id="submit-button" onclick="submitBut()">Submit</button>
+            <button id="start-button" onclick="start()">START</button>
+            <form id="answerParent" onsubmit="enterSub();return false">
+                <input type="number" id="answer" placeholder="your answer here" disabled="true" on>
+            </form>
+            <button id="submit-button" onclick="buttonSub()">Submit</button>
         </div>
     </div>
 
