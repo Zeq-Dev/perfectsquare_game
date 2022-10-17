@@ -35,6 +35,17 @@
     height: 15em;
 }
 
+#queue-div {
+    background-color: transparent;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 1.5em;
+}
+
 #number {
     background-color: transparent;
     position: absolute;
