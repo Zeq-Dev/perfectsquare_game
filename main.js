@@ -16,6 +16,7 @@ function randomNumber() {
 
 function start() {
     queues = 0;
+    score.innerHTML = '0'
     perfectSquare = randomNumber();
     number_queue.innerHTML = perfectSquare + '²';
     start_button.style.display = "none";
