@@ -5,7 +5,8 @@ const answer_form = document.getElementById('answer');
 const answer_parent = document.getElementById('answerParent');
 const number_queue = document.querySelector('#number');
 const start_button = document.getElementById('start-button');
-const submit_button = document.getElementById('submit-button')
+const submit_button = document.getElementById('submit-button');
+const queue = document.getElementById('queue');
 const score = document.querySelector('#score');
 
 function randomNumber() {
@@ -15,7 +16,8 @@ function randomNumber() {
 }
 
 function start() {
-    queues = 0;
+    queues = 1;
+    queue.innerHTML = queues
     score.innerHTML = '0'
     perfectSquare = randomNumber();
     number_queue.innerHTML = perfectSquare + '²';
@@ -26,10 +28,11 @@ function start() {
 }
 
 function checkAns() {
-    if (queues == 9) {
+    if (queues == 10) {
         if (squared * squared == answer_form.value) {
             score.innerHTML = Number(score.innerHTML) + 1;
         }
+        queue.innerHTML = 0
         number_queue.innerHTML = "Press Start!";
         start_button.style.display = "block";
         submit_button.style.display = "none";
@@ -39,6 +42,7 @@ function checkAns() {
         perfectSquare = randomNumber();
         number_queue.innerHTML = perfectSquare + '²';
         queues += 1;
+        queue.innerHTML = queues
     } else if (answer_form.value == '') {
         return;
     } else if (squared * squared != answer_form.value) {
@@ -46,6 +50,7 @@ function checkAns() {
         perfectSquare = randomNumber();
         number_queue.innerHTML = perfectSquare + '²';
         queues += 1;
+        queue.innerHTML = queues
     }
 }
 
