@@ -17,7 +17,7 @@ function submitBut () {
     var answer = document.getElementById('answer').value;
     document.getElementById('answer').value = '';
     console.log('#'+queues)
-    if (queues == 10) {
+    if (queues == 9) {
         document.getElementById("number").innerHTML = "Press Start!";
         document.getElementById("start-button").style.display = "block";
         document.getElementById("submit-button").style.display = "none";
@@ -40,15 +40,18 @@ function submitBut () {
 
 function subAnw() {
     document.addEventListener("keyup", function(event) {
-        if (event.code === 'Enter') {
+        if (event.code === 'Enter' || event.keyCode === 13) {
             var answer = document.getElementById('answer').value;
             document.getElementById('answer').value = '';
             console.log('#'+queues)
-            if (queues == 10) {
+            if (queues == 9) {
                 document.getElementById("number").innerHTML = "Press Start!";
                 document.getElementById("start-button").style.display = "block";
                 document.getElementById("submit-button").style.display = "none";
                 document.getElementById("answer").disabled = true;
+                if (perfectSquare * perfectSquare == answer) {
+                    score.innerHTML = parseInt(score.innerHTML) + 1;
+                }
             } else if (perfectSquare * perfectSquare == answer) {
                 score.innerHTML = parseInt(score.innerHTML) + 1;
                 perfectSquare = Math.floor(Math.random() * 30);
