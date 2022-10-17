@@ -28,11 +28,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -110%);
     border: 1px solid white;
     background-color: #0e0e0e;
     width: 30em;
-    height: 10em;
+    height: 15em;
 }
 
 #number {
@@ -43,7 +43,7 @@
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    font-size: 4em;
+    font-size: 5em;
 }
 
 .score {
@@ -61,7 +61,7 @@
     border: 1px solid white;
     color: white;
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2em;
@@ -72,7 +72,7 @@
     border: 1px solid white;
     color: white;
     position: absolute;
-    top: 55%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 5em;
@@ -83,7 +83,7 @@
     border: 1px solid white;
     color: white;
     position: absolute;
-    top: 55%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 5em;
