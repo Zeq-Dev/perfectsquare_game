@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Perfect Square 1-30</title>
+</head>
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>Perfect Square 1-30</h1>
+        </div>
+        <div class="game">
+            <div class="board">
+                <div id="queue-div">#<span id="queue">0</span></div>
+                <div id="number">Press Start!</div>
+                <div class="score"><span id="score">0</span>/10</div>
+            </div>
+            <button id="start-button" onclick="start()">START</button>
+            <form id="answerParent" onsubmit="enterSub();return false">
+                <input type="number" id="answer" placeholder="your answer here" disabled="true" on>
+            </form>
+            <button id="submit-button" onclick="buttonSub()">Submit</button>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
