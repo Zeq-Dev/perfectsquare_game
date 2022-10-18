@@ -1,7 +1,7 @@
 var queues;
 var squared;
-var correct = new Audio('resources/sounds/correct.mp3');
-var incorrect = new Audio('resources/sounds/incorrect.mp3');
+var correct = new Audio('resources/correct.mp3');
+var incorrect = new Audio('resources/incorrect.mp3');
 
 const answer_form = document.getElementById('answer');
 const answer_parent = document.getElementById('answerParent');
