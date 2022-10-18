@@ -1,5 +1,7 @@
 var queues;
 var squared;
+var correct = new Audio('resources/sounds/correct.mp3');
+var incorrect = new Audio('resources/sounds/incorrect.mp3');
 
 const answer_form = document.getElementById('answer');
 const answer_parent = document.getElementById('answerParent');
@@ -31,6 +33,7 @@ function checkAns() {
     if (queues == 10) {
         if (squared * squared == answer_form.value) {
             score.innerHTML = Number(score.innerHTML) + 1;
+            correct.play();
         }
         queue.innerHTML = 0
         number_queue.innerHTML = "Press Start!";
@@ -43,6 +46,7 @@ function checkAns() {
         number_queue.innerHTML = perfectSquare + '²';
         queues += 1;
         queue.innerHTML = queues
+        correct.play();
     } else if (answer_form.value == '') {
         return;
     } else if (squared * squared != answer_form.value) {
@@ -51,6 +55,7 @@ function checkAns() {
         number_queue.innerHTML = perfectSquare + '²';
         queues += 1;
         queue.innerHTML = queues
+        incorrect.play();
     }
 }
 
