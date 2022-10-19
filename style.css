@@ -7,6 +7,7 @@
 
 .main {
     position: relative;
+    margin-top: 10%;
     background-color: #1e1e1e;
     height: 100%;
 }
@@ -91,7 +92,7 @@
     transform: translate(-50%, -50%);
     width: 5em;
     font-size: 2em;
-    transition: width 2s;
+    transition: width 0.5s ease-in-out;
 }
 
 #start-button:hover {
@@ -111,3 +112,29 @@
     display: none;
 }
 
+#creds-div {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -110%);
+    width: max-content;
+    height: 1em;
+    border-radius: 5px;
+}
+
+#github-icon {
+    width: 1em;
+}
+
+#github {
+    background-color: transparent;
+    color: #d4d4d4;
+    text-decoration: underline rgb(212, 212, 212, 0.5);
+    transition: text-decoration 0.5s;
+}
+
+#github:hover {
+    text-decoration: underline rgb(212, 212, 212, 1);
+}
